@@ -10,8 +10,7 @@ class User < ApplicationRecord
         1
     end
 
-    def contest_position
-        #add functionality later
-        1
+    def self.rank_users
+        self.all.sort_by {|user| user.balance }.reverse
     end
 end

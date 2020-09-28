@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  # resources :teams
-  # resources :contests
+  resources :teams
+  resources :contests
   resources :users
+  resources :players, only: [:show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   #get '/users/:id/wishlist', to: 'users#wishlist'
+
+  get '/', to: 'contests#index'
 end

@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 2020_09_28_175215) do
   create_table "players", force: :cascade do |t|
     t.string "name"
     t.string "position"
-    t.string "nfl_team"
+    t.string "nfl_team_code"
+    t.string "nfl_team_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

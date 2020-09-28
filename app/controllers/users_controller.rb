@@ -2,7 +2,7 @@ class UsersController < ApplicationController
     before_action :get_user, only: [:show, :edit, :update, :destroy]
 
     def index
-        @users = User.all
+        @users = User.rank_users
     end
 
     def show
@@ -31,6 +31,11 @@ class UsersController < ApplicationController
             flash[:errors] = @user.errors
             redirect_to edit_user_path
         end
+    end
+
+    def destroy
+       @user.destroy
+       redirect_to '/'
     end
     
     # def wishlist

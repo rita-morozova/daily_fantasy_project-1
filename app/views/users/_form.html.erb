@@ -1,7 +1,6 @@
 <%= form_for @user do |f| %>
     <%= f.label :username %>
     <%= f.text_field :username %>
-    <% #byebug %>
     <% if flash[:errors] && flash[:errors]["username"]%>
         <i style="color:red">Username Already Taken</i>
     <% end %><br />

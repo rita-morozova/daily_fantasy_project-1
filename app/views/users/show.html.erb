@@ -4,3 +4,5 @@
 <% @user.contests.each do |contest| %>
     <%= link_to constest.name, contest_path(contest) %> : <%= @user.contest_position %>
 <% end %>
+
+<%= button_to "Delete User", @user, :method => :delete %>
