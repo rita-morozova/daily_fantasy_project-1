@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  qb: 1
+  rb1: 1
+  rb2: 1
+  wr1: 1
+  wr2: 1
+  te: 1
+  user: one
+  contest: one
+
+two:
+  qb: 1
+  rb1: 1
+  rb2: 1
+  wr1: 1
+  wr2: 1
+  te: 1
+  user: two
+  contest: two
