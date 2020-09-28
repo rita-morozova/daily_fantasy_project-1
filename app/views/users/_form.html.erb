@@ -1,0 +1,18 @@
+<%= form_for @user do |f| %>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+    <% #byebug %>
+    <% if flash[:errors] && flash[:errors]["username"]%>
+        <i style="color:red">Username Already Taken</i>
+    <% end %><br />
+    <%= f.label :email %>
+    <%= f.text_field :email %>    
+    <% if flash[:errors] && flash[:errors]["email"]%>
+        <i style="color:red">There is already an account with this email</i>
+    <% end %><br />
+    <%= f.label :password %>
+    <%= f.password_field :password %><br />
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %><br />
+    <%= f.submit %>
+<% end %>
