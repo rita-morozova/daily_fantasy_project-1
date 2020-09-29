@@ -10,6 +10,13 @@ class User < ApplicationRecord
         1
     end
 
+    def score_for_contest(contest)
+        team = self.teams.find_by(contest_id: contest.id)
+        if team
+            return team.get_score
+        end
+    end
+
     def self.rank_users
         self.all.sort_by {|user| user.balance }.reverse
     end

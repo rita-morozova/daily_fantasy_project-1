@@ -8,7 +8,9 @@ class Contest < ApplicationRecord
     validates :game_week, inclusion: { in: 1..17 }
 
     def ranked_users
-        self.users
+        self.users.sort_by do |user|
+            user.score_for_contest(self)
+        end.reverse
     end
 
     def count_players
