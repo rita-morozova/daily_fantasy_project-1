@@ -18,4 +18,13 @@ class Team < ApplicationRecord
        salary += Player.find(self.te).salary_modifier
   end
 
+  def get_score
+    score = Player.find(self.qb).get_score_for_game_week(self.contest.game_week)
+    score += Player.find(self.rb1).get_score_for_game_week(self.contest.game_week)
+    score += Player.find(self.rb2).get_score_for_game_week(self.contest.game_week)
+    score += Player.find(self.wr1).get_score_for_game_week(self.contest.game_week)
+    score += Player.find(self.wr2).get_score_for_game_week(self.contest.game_week)
+    score += Player.find(self.te).get_score_for_game_week(self.contest.game_week)
+  end
+
 end

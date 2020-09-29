@@ -14,4 +14,9 @@ class Player < ApplicationRecord
     def name_team_salary
         self.name + ", " + self.nfl_team_code + " $ " + (self.salary_modifier * 6667 ).round(0).to_s(:delimited)
     end
+
+    def get_score_for_game_week(game_week)
+        week = self.weeks.find_by(game_week: game_week)
+        week ? week.score : 0
+    end
 end
