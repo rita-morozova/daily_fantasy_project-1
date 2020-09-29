@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'fantasy_football_nerd'
+gem 'csv'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

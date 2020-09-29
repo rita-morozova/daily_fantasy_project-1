@@ -1,0 +1,6 @@
+<h1>Create Team for Contest</h1>
+<ul>
+<% @players.each do |player| %>
+    <li><%= link_to player.name, player_path(player)%> <%= " $" + (player.salary_modifier * 10000).round(0).to_s(:delimited) %></li>
+<% end %>
+</ul>

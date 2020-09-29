@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_09_28_175215) do
     t.string "position"
     t.string "nfl_team_code"
     t.string "nfl_team_name"
+    t.float "salary_modifier", default: 1.0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
