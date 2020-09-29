@@ -10,4 +10,8 @@ class Contest < ApplicationRecord
     def ranked_users
         self.users
     end
+
+    def count_players
+        self.players.find{|player| player.position}
+    end
 end

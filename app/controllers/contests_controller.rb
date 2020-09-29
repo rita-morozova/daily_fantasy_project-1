@@ -1,5 +1,6 @@
 class ContestsController < ApplicationController
     before_action :get_contest, only: [:show, :edit, :update, :destroy]
+    skip_before_action :require_login, only: [:index]
 
     def index
         @contests = Contest.all

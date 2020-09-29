@@ -1,5 +1,12 @@
 <h1>FFF</h1>
-<h2>Fanatsy Football Flatiron</h2>
+<h2>Fantasy Football Flatiron</h2>
+<% if session[:user_id] %>
+<%= User.find(session[:user_id]).username %>
+<%= button_to "Log out", logout_path %>
+<% else %>
+<%= link_to "Log in", login_path %>
+<%= link_to "Sign up", new_user_path %>
+<% end %>
 <ol>
 <% @contests.each do |contest| %>
     <li><%= link_to contest.name, contest_path(contest) %> <%= link_to "Join Contest", new_team_path %></li>

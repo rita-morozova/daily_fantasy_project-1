@@ -8,4 +8,8 @@ class Player < ApplicationRecord
             end
         end
     end
+
+    def name_team_salary
+        self.name + ", " + self.nfl_team_code + " $ " + (self.salary_modifier * 6667 ).round(0).to_s(:delimited)
+    end
 end
