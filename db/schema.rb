@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_28_175215) do
+ActiveRecord::Schema.define(version: 2020_09_29_224206) do
 
   create_table "contests", force: :cascade do |t|
     t.string "name"
@@ -51,6 +51,14 @@ ActiveRecord::Schema.define(version: 2020_09_28_175215) do
     t.string "password_digest"
     t.integer "balance", default: 0
     t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "weeks", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "game_week"
+    t.integer "score"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,4 +1,6 @@
 class Player < ApplicationRecord
+    has_many :weeks
+    
     def self.update_salary_modifiers
         table = CSV.parse(File.read("storage/new_data.csv"), headers: true)
         table.each do |row|

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :weeks
   resources :teams
   resources :contests
   resources :users
