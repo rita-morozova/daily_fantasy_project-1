@@ -4,6 +4,7 @@ class Team < ApplicationRecord
 
   include ActiveModel::Validations
   validates_with TotalSalaryValidator
+  validates :user_id, uniqueness: { scope: :contest_id, message: "can only create one team per contest" }
 
   def get_players_by_position(position)
     Player.where(position: position)
