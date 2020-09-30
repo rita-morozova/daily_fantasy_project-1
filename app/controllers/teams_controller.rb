@@ -3,10 +3,10 @@ class TeamsController < ApplicationController
         @contests = Contest.all
         @team = Team.new
         Player.update_salary_modifiers
-        @players_qb = @team.get_players_by_position("QB")
-        @players_rb = @team.get_players_by_position("RB")
-        @players_wr = @team.get_players_by_position("WR")
-        @players_te = @team.get_players_by_position("TE")
+        @players_qb = @team.get_players_by_position("QB").sort_by {|player| player.salary_modifier}.reverse
+        @players_rb = @team.get_players_by_position("RB").sort_by {|player| player.salary_modifier}.reverse
+        @players_wr = @team.get_players_by_position("WR").sort_by {|player| player.salary_modifier}.reverse
+        @players_te = @team.get_players_by_position("TE").sort_by {|player| player.salary_modifier}.reverse
       #  @players = Player.all.sort_by{|player| player.salary_modifier}.reverse
     end
 
