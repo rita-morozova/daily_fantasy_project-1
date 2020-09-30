@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_09_29_224206) do
     t.string "password_digest"
     t.integer "balance", default: 0
     t.string "email"
+    t.boolean "admin", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

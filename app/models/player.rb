@@ -12,7 +12,7 @@ class Player < ApplicationRecord
     end
 
     def name_team_salary
-        self.name + ", " + self.nfl_team_code + " $ " + (self.salary_modifier * 6667 ).round(0).to_s(:delimited)
+        self.name + ", " + self.nfl_team_code + " $ " + (self.salary_modifier * 10000 ).round(0).to_s(:delimited)
     end
 
     def get_score_for_game_week(game_week)

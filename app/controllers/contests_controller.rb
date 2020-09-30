@@ -7,11 +7,12 @@ class ContestsController < ApplicationController
     end
 
     def show
-
+        
     end
 
     def new
         @contest = Contest.new
+        @user = User.find(session[:user_id])
     end
 
     def create
@@ -26,7 +27,7 @@ class ContestsController < ApplicationController
     end
 
     def edit
-
+        @user = User.find(session[:user_id])
     end
 
     def update

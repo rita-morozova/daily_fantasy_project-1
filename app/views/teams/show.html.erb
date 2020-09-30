@@ -1,0 +1,11 @@
+<h1> My team </h1>
+<ul>
+<li><h2> Quaterback: <%= Player.find(@team.qb).name %> </h2></li>
+<li><h2> Running Back: <%= Player.find(@team.rb1).name %> </h2></li>
+<li><h2> Running Back: <%= Player.find(@team.rb2).name %> </h2></li>
+<li><h2> Wide Receiver: <%= Player.find(@team.wr1).name %> </h2></li>
+<li><h2> Wide Receiver: <%= Player.find(@team.wr2).name %> </h2></li>
+<li><h2> Tight End: <%= Player.find(@team.te).name %> </h2></li>
+</ul>
+
+<%= link_to "Edit Team", edit_team_path %>

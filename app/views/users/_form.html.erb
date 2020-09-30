@@ -1,4 +1,5 @@
-<%= form_for :user, url: '/users' do |f| %>
+<%= form_for @user do |f| %>
+   c
     <%= f.label :username %>
     <%= f.text_field :username %>
     <% if flash[:errors] && flash[:errors]["username"]%>
@@ -9,6 +10,7 @@
     <% if flash[:errors] && flash[:errors]["email"]%>
         <i style="color:red">There is already an account with this email</i>
     <% end %><br />
+    <% end %>
     <%= f.label :password %>
     <%= f.password_field :password %><br />
     <%= f.label :password_confirmation %>

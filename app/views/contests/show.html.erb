@@ -2,7 +2,12 @@
 <h2><%="Budget $ " + @contest.budget.to_s %></h2>
 <h2><%="Prize $ " + @contest.prize.to_s %></h2>
 <ol>
+
     <% @contest.ranked_users.each do |user|%>
+        <% if user.id == session[:user_id] %>
+        <li><%= link_to user.username, team_path(user.teams.where(contest_id: @contest.id)[0].id)%><%=  " " + user.score_for_contest(@contest).to_s %></li>
+        <% else %>
         <li><%= user.username + " " + user.score_for_contest(@contest).to_s %></li>
+    <% end %>
     <% end %>
 <ol>

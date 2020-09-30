@@ -1,2 +1,6 @@
 <h1>Create Contest</h1>
+<% if @user.admin == true %>
 <%= render 'form' %>
+<% else %>
+<p style="color:red"><%= "You can not edit the contest" %></p>
+<%end %>
