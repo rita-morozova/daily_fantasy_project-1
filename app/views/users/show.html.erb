@@ -1,3 +1,4 @@
+<% if @user.id == session[:user_id] %>
 <h1><%= @user.username %></h1>
 <h2>Balance: <%= @user.balance%></h2>
 <h3>Overall Position: <%= @user.overall_position%> </h3>
@@ -5,5 +6,10 @@
     <%= link_to contest.name, contest_path(contest) %> 
 <% end %></h3>
 
+
 <%= link_to "Edit Profile", edit_user_path%>
 <%= button_to "Delete User", @user, :method => :delete %>
+
+<%else%>
+<%= "Access is denied" %>
+<% end %>

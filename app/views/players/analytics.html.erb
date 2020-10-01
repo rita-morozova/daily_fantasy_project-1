@@ -1,0 +1,15 @@
+<h2> Top-Ten the most expensive players </h2>
+<ul><% Player.top_ten.each do |player| %>
+  <li><%= player %></li>
+  <% end %></ul>
+
+<h2> Top-Ten the least expensive players </h2>
+<ul><% Player.bottom_ten.each do |player| %>
+  <li><%= player %></li>
+  <% end %></ul>
+
+  <h2> Top-Ten players with the highest score </h2>
+<ul><% Player.highest_score.each do |player| %>
+  <li><%= player %></li>
+  <% end %></ul>
+

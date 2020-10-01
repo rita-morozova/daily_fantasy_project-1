@@ -1,5 +1,5 @@
 <%= form_for @user do |f| %>
-   c
+    <% if !@user.username %>
     <%= f.label :username %>
     <%= f.text_field :username %>
     <% if flash[:errors] && flash[:errors]["username"]%>

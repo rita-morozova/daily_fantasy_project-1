@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   resources :teams
   resources :contests
   resources :users
-  resources :players, only: [:show]
+  get '/players/analytics', to: "players#analytics"
+  resources :players, only: [:show, :index] 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   #get '/users/:id/wishlist', to: 'users#wishlist'
 
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   post "/logout", to: "sessions#destroy"
+ 
 
   
 end

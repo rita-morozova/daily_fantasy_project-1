@@ -1,3 +1,9 @@
 <h1>Name: <%= @player.name %><h1>
 <h2>Position: <%= @player.position %></h2>
 <h2>Team: <%= @player.nfl_team_name %></h2>
+<h2> Score by week: </h2>
+<ul>
+<% @player.score_by_week.each do |score| %>
+  <li><%= score %></li>
+  <%end%>
+  </ul>

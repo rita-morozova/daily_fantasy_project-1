@@ -19,4 +19,27 @@ class Player < ApplicationRecord
         week = self.weeks.find_by(game_week: game_week)
         week ? week.score : 0
     end
+
+    def self.top_ten 
+        top = Player.all.sort_by {|player| player.salary_modifier}.reverse[0..9]
+        top.map {|player| player.name + " $ " + ((player.salary_modifier * 10000).round(0)).to_s(:delimited)}
+    end
+
+    def self.bottom_ten 
+        bottom = Player.all.sort_by {|player| player.salary_modifier}[0..9]
+        bottom.map {|player| player.name + " $ " + ((player.salary_modifier * 10000).round(0)).to_s(:delimited)}
+    end
+
+    def self.highest_score
+        score = Player.top_ten_weeks.map {|week| week.player.name + " " + week.score.to_s}
+    end
+
+    def self.top_ten_weeks
+        week = Week.all.sort_by {|week| week.score}.reverse[0..9]
+    end
+
+    def score_by_week
+        self.weeks.map {|week| "Week " + week.game_week.to_s + " score: " + week.score.to_s}
+    end
+    
 end

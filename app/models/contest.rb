@@ -16,4 +16,8 @@ class Contest < ApplicationRecord
     def count_players
         self.players.find{|player| player.position}
     end
+
+    def self.biggest_prize
+        Contest.all.sort_by {|contest| contest.prize}.reverse
+    end
 end
