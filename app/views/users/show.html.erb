@@ -1,4 +1,4 @@
-<%=image_tag('football-banner')%>
+
 <div class="container">
 <% if @user.id == session[:user_id] %>
 <h1>Username: <%= @user.username %></h1><br>
@@ -19,3 +19,4 @@
 <p style="color:red"><%= "Access is denied"%></p>
 <% end %>
 </div>
+
