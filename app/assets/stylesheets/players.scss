@@ -10,3 +10,26 @@ h1,h2 {
 @keyframes mymove {
   50% {color: red;}
 }
+.container {
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  font-family: Oswald, Helvetica, Arial;
+  color: #333332;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.container a:hover {
+  color: purple;
+}
+
+.container a:visited {
+  color: blue;
+}
+
+.column {
+  float: left;
+  width: 31%;
+  padding: 10px;
+}

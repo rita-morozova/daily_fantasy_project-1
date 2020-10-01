@@ -1,7 +1,9 @@
 <h1><%=image_tag('football-banner')%></h1>
-<h1>Edit Contest</h1>
+<div class="container">
 <% if @user.admin == true %>
+<h1>EDIT CONTEST</h1>
 <%= render 'form' %>
 <% else %>
 <p style="color:red"><%= "You can not edit the contest" %></p>
 <% end%>
+</div>

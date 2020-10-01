@@ -1,9 +1,12 @@
-<h1>Login Page</h1>
+
+<h1><%=image_tag('football-banner')%></h1>
+<div class="container">
+<h1>Login Page</h1><br>
 <%= form_tag('/login', method: :post) do %>
     <%= label_tag :username %>
-    <%= text_field_tag :username %>
+    <%= text_field_tag :username %><br>
     <%= label_tag :password %>
-    <%= password_field_tag :password %>
+    <%= password_field_tag :password %><br>
     <%= submit_tag 'Log in' %>
   <% end %>
 
@@ -11,3 +14,4 @@
   <p style="color:red"><%= flash[:message] %></p>
   <%= link_to "Sign Up", new_user_path %>
   <% end %>
+  </div>

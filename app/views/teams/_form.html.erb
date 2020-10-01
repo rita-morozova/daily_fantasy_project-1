@@ -1,5 +1,6 @@
+<div class ="container">
 <%= form_for @team do |f| %>
-  <ul>
+  <ul class="no_dotes">
  <li> <%= f.label "Contest" %>
   <%= f.collection_select :contest_id, @contests, :id, :name %></li><br>
   <li><%= f.label "Quarterback Player" %>
@@ -24,3 +25,4 @@
       <p style="color:red"><%= error %></p>
   <% end %>
   <% end %>
+  </div>

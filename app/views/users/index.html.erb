@@ -1,7 +1,9 @@
 <h1><%=image_tag('football-banner')%></h1>
-<h1>User Rank Page</h1>
+<div class="container">
+<h1>USER RANKING</h1><br>
 <ol>
 <% @users.each do |user| %>
-    <li><%= link_to user.username, user_path(user) %><%=" $" + user.balance.to_s %></li>
+    <li><%= link_to user.username, user_path(user) %><%=" $" + user.balance.to_s%></li><br>
 <% end %>
 </ol>
+</div>

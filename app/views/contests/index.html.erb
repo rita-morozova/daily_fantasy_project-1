@@ -1,5 +1,5 @@
 <h1><%=image_tag('logo')%></h1>
-<h2>Fantasy Football Flatiron</h2>
+
 <% if session[:user_id] %>
 <%= User.find(session[:user_id]).username %>
 <%= button_to "Log out", logout_path %>
@@ -8,8 +8,13 @@
 <%= link_to "Sign up", new_user_path %>
 <% end %>
 
-<ol>
-<% Contest.biggest_prize.each do |contest| %>
-    <li><%= link_to contest.name, contest_path(contest) %> <%= "$ " + contest.prize.to_s %> <%= link_to "  Enter to win", new_team_path %></li>
-<% end %>
-</ol>
+
+
+<div class="container">
+        <ul class="list">
+                <h1> CONTESTS </h1><br> 
+                <% Contest.biggest_prize.each do |contest| %>
+                <li><%= link_to contest.name, contest_path(contest) %> <%= "$ " + contest.prize.to_s %> <%= link_to "  Enter to win", new_team_path %></li><br>
+                <% end %>
+         </ul>
+</div>

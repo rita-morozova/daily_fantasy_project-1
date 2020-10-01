@@ -1,3 +1,33 @@
 // Place all the styles related to the contests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.container {
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+  font-family: Oswald, Helvetica, Arial;
+  color: #333332;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+
+.container a:hover {
+  color: purple;
+}
+
+.container a:visited {
+  color: blue;
+}
+
+.list {
+  list-style: none;
+}
+
+.list li:before {
+  content: "🏈";
+  margin: 0 16px 0 0;
+}

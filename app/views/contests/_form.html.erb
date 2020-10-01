@@ -1,6 +1,6 @@
 <%= form_for @contest do |f| %>
     <%= f.label :name %>
-    <%= f.text_field :name %><br>
+    <%= f.text_field :name%><br>
     <% if flash[:errors] && flash[:errors]["name"]%>
         <i style="color:red">Contest Name Already Taken</i>
     <% end %><br />

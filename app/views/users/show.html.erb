@@ -1,16 +1,23 @@
 <h1><%=image_tag('football-banner')%></h1>
+<div class="container">
 <% if @user.id == session[:user_id] %>
-<h1><%= @user.username %></h1>
-<h2>Balance: <%= @user.balance%></h2>
-<h3>Overall Position: <%= @user.overall_position%> </h3>
-<h3>My contests: <% @user.contests.each do |contest| %>
-    <%= link_to contest.name, contest_path(contest) %> 
-<% end %></h3>
+<h1>Username:<%= @user.username %></h1><br>
+
+<h3>Balance: <%= @user.balance%></h3><br>
+<h3>Overall Position: <%= @user.overall_position %></h3><br>
+
+<h3>My contests:</h3><br>
+<h4><ul class="list"><% @user.contests.each do |contest| %>
+    <li><%= link_to contest.name, contest_path(contest) %></li> <br> 
+<% end %></ul></h4><br><br>
 
 
 <%= link_to "Edit Profile", edit_user_path%>
+<br>
+<br>
 <%= button_to "Delete User", @user, :method => :delete %>
 
 <%else%>
-<%= "Access is denied" %>
+<p style="color:red"><%= "Access is denied"%></p>
 <% end %>
+</div>
