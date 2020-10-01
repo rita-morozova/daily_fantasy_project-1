@@ -4,13 +4,13 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .animation {
-    color: blue;
+    color: rgb(60, 104, 61);
     animation: mymove 5s infinite;
   }
 
 
 @keyframes mymove {
-  50% {color: red;}
+  50% {color: rgb(153, 186, 123);}
 }
 
 .container {

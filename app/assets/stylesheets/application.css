@@ -13,4 +13,29 @@
  *= require_tree .
  *= require_self
  */
- link_to 'reset'
+ul.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3c661c;
+}
+
+ul.navigation > li {
+    float: left;
+    border-right: solid 1px white;
+}
+
+ul.navigation > li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 40px;
+    text-decoration: none;
+}
+
+ul.navigation > li a:hover {
+    background-color: rgb(70, 103, 78);
+}
+
+link_to 'reset'

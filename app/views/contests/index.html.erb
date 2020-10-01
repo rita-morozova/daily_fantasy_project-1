@@ -1,15 +1,4 @@
 <h1><%=image_tag('logo')%></h1>
-
-<% if session[:user_id] %>
-<%= User.find(session[:user_id]).username %>
-<%= button_to "Log out", logout_path %>
-<% else %>
-<%= link_to "Log in", login_path %>
-<%= link_to "Sign up", new_user_path %>
-<% end %>
-
-
-
 <div class="container">
         <ul class="list">
         <div class="animation">
