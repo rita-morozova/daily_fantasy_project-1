@@ -1,0 +1,8 @@
+<%=image_tag('football-banner')%>
+<div class ="container">
+<% @user.teams.each do |team| %>
+  <ul>
+ <li> <%= link_to team.contest.name, contest_path(team.contest) %> <%= " - Score: " + @user.score_for_contest(team.contest).to_s %></li>
+  <%end %>
+   </ul>
+  </div>

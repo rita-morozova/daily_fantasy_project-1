@@ -1,4 +1,5 @@
 class PlayersController < ApplicationController
+    skip_before_action :require_login, only: [:analytics]
 
     def index
         @players = Player.all

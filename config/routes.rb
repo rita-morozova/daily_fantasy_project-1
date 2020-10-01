@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "/users/users_contests", to: "users#users_contests"
   resources :weeks
   resources :teams, except: :index
   resources :contests
@@ -11,7 +12,9 @@ Rails.application.routes.draw do
   get '/', to: 'contests#index'
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
+  get "/logout", to: "sessions#destroy"
   post "/logout", to: "sessions#destroy"
+  
  
 
   

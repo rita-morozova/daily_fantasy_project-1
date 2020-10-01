@@ -43,9 +43,9 @@ class UsersController < ApplicationController
        redirect_to '/'
     end
     
-    # def wishlist
-
-    # end
+  def users_contests
+    @user = User.find(session[:user_id])
+   end
 
     private
 

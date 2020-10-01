@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+
+
 ul.navigation {
     list-style-type: none;
     margin: 0;
@@ -20,6 +23,7 @@ ul.navigation {
     overflow: hidden;
     background-color: #3c661c;
 }
+
 
 ul.navigation > li {
     float: left;
@@ -37,5 +41,6 @@ ul.navigation > li a {
 ul.navigation > li a:hover {
     background-color: rgb(70, 103, 78);
 }
+
 
 link_to 'reset'
