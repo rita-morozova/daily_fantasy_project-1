@@ -33,7 +33,7 @@ Put require rails/all in config/application.rb .
 * Gnerate tables and controllers by
 `rails g resource modelname colname:datatype` 
 
-* Create associations in the modelname.rb and then run `rails db:migrate` and `rails db:seed`.
+* Create associations in the modelname.rb and then run `rails db:migrate` and after creating seeds in seeds.rb file run          `rails db:seed`.
 
 * Our database is setup.
 
