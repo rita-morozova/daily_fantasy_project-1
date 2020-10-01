@@ -10,9 +10,8 @@
 <h4><ul class="list"><% @user.contests.each do |contest| %>
     <li><%= link_to contest.name, contest_path(contest) %></li> <br> 
 <% end %></ul></h4><br><br>
-
-
 <%= link_to "Edit Profile", edit_user_path%>
+<%= button_to "Log out", logout_path %>
 <br>
 <br>
 <%= button_to "Delete User", @user, :method => :delete %>
