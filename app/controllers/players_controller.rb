@@ -3,9 +3,9 @@ class PlayersController < ApplicationController
     def index
         @players = Player.all
         @players_qb = @players.where(position: "QB")
-        @players_rb = @players.where(position: "QB")
-        @players_wr = @players.where(position: "QB")
-        @players_te = @players.where(position: "QB")
+        @players_rb = @players.where(position: "RB")
+        @players_wr = @players.where(position: "WR")
+        @players_te = @players.where(position: "TE")
     end 
 
     def show

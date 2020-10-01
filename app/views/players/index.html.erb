@@ -1,11 +1,40 @@
 <h1><%=image_tag('football-banner')%></h1>
 <div class="container">
-<h1> PLAYERS</h1>
+<h1> PLAYERS</h1><br>
+<h3> QUATERBACK </h3><br>
+<ol> 
+<% @players_qb.each do |player| %>
+<li> <%= link_to player.name, player_path(player)%> <em><%= "  " + player.nfl_team_name %></em> </li>
+<% end%>
+</ol>
+<br>
+<br>
+
+<h3> RUNNING BACK </h3><br>
+<ol> 
+<% @players_rb.each do |player| %>
+<li> <%= link_to player.name, player_path(player)%> <em><%= "  " + player.nfl_team_name %></em> </li>
+<% end%>
+</ol>
+<br>
+<br>
+
+<h3> WIDE RECEIVER </h3><br>
+<ol> 
+<% @players_wr.each do |player| %>
+<li> <%= link_to player.name, player_path(player)%> <em><%= "  " + player.nfl_team_name %></em> </li>
+<% end%>
+</ol>
+<br>
+<br>
+
+<h3> TIGHT END </h3><br>
+<ol> 
+<% @players_te.each do |player| %>
+<li> <%= link_to player.name, player_path(player)%> <em><%= "  " + player.nfl_team_name %></em> </li>
+<% end%>
+</ol>
 
 
 </div>
 
-# @players_qb = @players.where(position: "QB")
-# @players_rb = @players.where(position: "QB")
-# @players_wr = @players.where(position: "QB")
-# @players_te = @players.where(position: "QB")
