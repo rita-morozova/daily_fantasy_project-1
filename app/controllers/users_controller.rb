@@ -7,6 +7,9 @@ class UsersController < ApplicationController
     end
 
     def show
+        if @user.id != session[:user_id]
+            redirect_to user_path(session[:user_id])
+        end
     end
 
     def new

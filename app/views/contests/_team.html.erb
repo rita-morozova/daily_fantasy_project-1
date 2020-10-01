@@ -1,0 +1,27 @@
+<h1>Create Team for Contest</h1>
+
+<%= fields_for @team[0] do |f| %>
+    <ul>
+    <li><%= f.label "Quarterback Player" %>
+    <%= f.collection_select :qb, @players_qb, :id, :name_team_salary %></li><br>
+   <li> <%= f.label "Running Back1 Player" %>
+    <%= f.collection_select :rb1, @players_rb, :id, :name_team_salary %></li><br>
+    <li><%= f.label "Running Back2 Player" %>
+    <%= f.collection_select :rb2, @players_rb, :id, :name_team_salary %></li><br>
+    <li><%= f.label "Wide Receiver1 Player" %>
+    <%= f.collection_select :wr1, @players_wr, :id, :name_team_salary %></li><br>
+    <li><%= f.label "Wide Receiver2 Player" %>
+    <%= f.collection_select :wr2, @players_wr, :id, :name_team_salary %></li><br>
+    <li><%= f.label "Tight End Player" %>
+    <%= f.collection_select :te, @players_te, :id, :name_team_salary %></li><br>
+    <%= f.hidden_field :user_id, value: session[:user_id] %>
+    <%= f.hidden_field :contest_id, value: @contest.id %>
+    <%= f.submit "Submit Your Team" %>
+    </ul>
+<% end %>
+
+    <% if flash[:errors] %>
+        <% flash[:errors].each do |error| %>
+            <p style="color:red"><%= error %></p>
+        <% end %>
+    <% end %>
