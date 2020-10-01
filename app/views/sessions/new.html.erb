@@ -2,14 +2,16 @@
 <h1><%=image_tag('football-banner')%></h1>
 <div class="container">
 <div class ="login">
-<h2>LOGIN HERE</h2><br>
+<h2>LOGIN HERE</h2>
   <%= form_tag('/login', method: :post) do %>
     <%= label_tag :username %>
     <%= text_field_tag :username %><br>
     <br>
     <%= label_tag :password %>
     <%= password_field_tag :password %><br>
-   <p style="float:right"> <%= submit_tag 'Log in Here' %></p>
+    <br>
+    <p style ="position:fixed; bottom:.5in"><%= submit_tag 'Log in Here'%></p>
+   
   <% end %>
 
   <% if flash[:message] %>
