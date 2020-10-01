@@ -28,5 +28,18 @@
   color: blue;
 }
 
+label{
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 250px;
+  text-align: left;
+}
+input {
+  margin: 5px;
+  display: inline-block;
+  float: left;
+}
+
 
 
