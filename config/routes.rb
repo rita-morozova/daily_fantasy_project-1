@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :weeks
-  resources :teams
+  resources :teams, except: :index
   resources :contests
   resources :users
   get '/players/analytics', to: "players#analytics"
