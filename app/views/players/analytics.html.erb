@@ -19,8 +19,40 @@
   <h3> PLAYERS WITH THE HIGHEST SCORE </h3><br>
 <p><ol><% Player.highest_score.each do |player| %>
   <li><%= player %></li><br>
-  <% end %></ol><p>
+  <% end %></ol></p>
+  </div>
+  </div>
+
+  <div class="row">
+  <div class="column">
+  <h3>TOP FIVE QUARTERBACKS</h3><br>
+  <p><ol><% Player.top_five_players_qb.each do |player| %>
+    <li><%= player %></li><br>
+    <% end %></ol></p>
+  </div>
+
+  <div class="column">
+  <h3>TOP FIVE RUNNING BACKS</h3><br>
+  <p><ol><% Player.top_five_players_rb.each do |player| %>
+    <li><%= player %></li><br>
+    <% end %></ol></p>
+  </div>
+
+  <div class="column">
+  <h3>TOP FIVE WIDE RECEIVERS</h3><br>
+  <p><ol><%  Player.top_five_players_wr.each do |player| %>
+    <li><%= player %></li><br>
+  <% end %></ol></p>
+  </div>
+
+  <div class="row">
+  <div class="column">
+  <h3>TOP FIVE TIGHT ENDS</h3><br>
+  <p><ol><% Player.top_five_players_te.each do |player| %>
+    <li><%= player %></li><br>
+  <% end %></ol></p>
   </div>
   </div>
   </div>
+  
 
