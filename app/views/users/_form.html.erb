@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_for @user do |f| %>
     <% if !@user.username %>
     <%= f.label :username %>
@@ -12,8 +13,9 @@
     <% end %><br />
     <% end %>
     <%= f.label :password %>
-    <%= f.password_field :password %><br />
+    <%= f.password_field :password %><br>
     <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %><br>
     <%= f.submit %>
 <% end %>
+</div>

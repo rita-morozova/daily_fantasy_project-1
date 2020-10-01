@@ -1,10 +1,12 @@
 <h1><%=image_tag('football-banner')%></h1>
-<h1>Name: <%= @player.name %><h1>
-<h2>Position: <%= @player.position %></h2>
-<h2>Team: <%= @player.nfl_team_name %></h2>
-<h2> Score by week: </h2>
+<div class="container">
+<h2>Name: <%= @player.name %><h2><br>
+<h2>Position: <%= @player.position %></h2><br>
+<h2>Team: <%= @player.nfl_team_name %></h2><br>
+<h2> Score by week: </h2><br>
 <ul>
 <% @player.score_by_week.each do |score| %>
   <li><%= score %></li>
   <%end%>
   </ul>
+  </div>

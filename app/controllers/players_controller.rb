@@ -1,12 +1,15 @@
 class PlayersController < ApplicationController
 
     def index
-        @player = Player.all 
+        @players = Player.all
+        @players_qb = @players.where(position: "QB")
+        @players_rb = @players.where(position: "QB")
+        @players_wr = @players.where(position: "QB")
+        @players_te = @players.where(position: "QB")
     end 
 
     def show
         @player = Player.find(params[:id])
-        #Player.update_salary_modifiers
     end
 
     def analytics 

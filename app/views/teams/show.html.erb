@@ -1,12 +1,21 @@
 <h1><%=image_tag('football-banner')%></h1>
-<h1> My team for <%=@team.contest.name%> Contest </h1>
+<div class="container">
+<h1> YOUR TEAM FOR <%=@team.contest.name%> Contest </h1>
+<br>
+<br>
 <ul>
-<li><h2> Quaterback: <%= Player.find(@team.qb).name %> </h2></li>
-<li><h2> Running Back: <%= Player.find(@team.rb1).name %> </h2></li>
-<li><h2> Running Back: <%= Player.find(@team.rb2).name %> </h2></li>
-<li><h2> Wide Receiver: <%= Player.find(@team.wr1).name %> </h2></li>
-<li><h2> Wide Receiver: <%= Player.find(@team.wr2).name %> </h2></li>
-<li><h2> Tight End: <%= Player.find(@team.te).name %> </h2></li>
+<li><h2> Quaterback: <%= Player.find(@team.qb).name %> </h2></li><br>
+
+<li><h2> Running Back: <%= Player.find(@team.rb1).name %> </h2></li><br>
+
+<li><h2> Running Back: <%= Player.find(@team.rb2).name %> </h2></li><br>
+
+<li><h2> Wide Receiver: <%= Player.find(@team.wr1).name %> </h2></li><br>
+
+<li><h2> Wide Receiver: <%= Player.find(@team.wr2).name %> </h2></li><br>
+
+<li><h2> Tight End: <%= Player.find(@team.te).name %> </h2></li><br>
 </ul>
 
 <%= link_to "Edit Team", edit_team_path %>
+</div>
