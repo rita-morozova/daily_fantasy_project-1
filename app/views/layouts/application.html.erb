@@ -13,11 +13,15 @@
   <body>
     <ul class="navigation">
     <li><a href="/">Home</a></li>
+    <li><a href="/users/users_contests">My Contests</a></li>
     <li><a href="/users">Users</a></li>
     <li><a href="/players">Players</a></li>
     <li><a href="/players/analytics">Analytics</a></li>
+    
+    
     <% if session[:user_id] %>
       <li stlye="float:right"><a href="/users/<%= session[:user_id] %>">My Profile</a></li>
+      <li stlye="float:right"><a href="/logout">Log Out</a></li>
     <% else %>
       <li stlye="float:right"><a href="/login">Log-In</a></li>
       <li stlye="float:right"><a href="/users/new">Sign-Up</a></li>
