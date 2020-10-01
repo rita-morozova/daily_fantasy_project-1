@@ -41,5 +41,25 @@ class Player < ApplicationRecord
     def score_by_week
         self.weeks.map {|week| "Week " + week.game_week.to_s + " score: " + week.score.to_s}
     end
-    
+
+    def avg_weekly_score
+        week1 = Week.all.select{|week| week.game_week == 1}.map{|item| item.score}.inject{|sum,n| sum + n}
+        week2 = Week.all.select{|week| week.game_week == 2}.map{|item| item.score}.inject{|sum,n| sum + n}
+        week3 = Week.all.select{|week| week.game_week == 3}.map{|item| item.score}.inject{|sum,n| sum + n}
+
+        total = week1 + week2 + week3 / 3
+    end
+
+    def top_five_players_by_position
+        top_qb = Player.all.select{|player| player.position == "QB"}.sort_by{|player| player.salary_modifier}.reverse[0..5]
+        top_qb.map {|player| player.name + " $ " + ((player.salary_modifier * 10000).round(0)).to_s(:delimited)}
+        top_rb = Player.all.select{|player| player.position == "RB"}.sort_by{|player| player.salary_modifier}.reverse[0..5]
+        top_rb.map {|player| player.name + " $ " + ((player.salary_modifier * 10000).round(0)).to_s(:delimited)}
+        top_wr = Player.all.select{|player| player.position == "WR"}.sort_by{|player| player.salary_modifier}.reverse[0..5]
+        top_wr.map {|player| player.name + " $ " + ((player.salary_modifier * 10000).round(0)).to_s(:delimited)}
+        top_te = Player.all.select{|player| player.position == "TE"}.sort_by{|player| player.salary_modifier}.reverse[0..5]
+        top_te.map {|player| player.name + " $ " + ((player.salary_modifier * 10000).round(0)).to_s(:delimited)}
+    end
+
+
 end
