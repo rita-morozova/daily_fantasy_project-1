@@ -12,7 +12,9 @@
 
 <div class="container">
         <ul class="list">
+        <div class="animation">
                 <h1> CONTESTS </h1><br> 
+                        </div>
                 <% Contest.biggest_prize.each do |contest| %>
                 <li><%= link_to contest.name, contest_path(contest) %> <%= "$ " + contest.prize.to_s %> <%= link_to "  Enter to win", new_team_path %></li><br>
                 <% end %>
