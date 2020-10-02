@@ -55,4 +55,7 @@ Our model follows single responsibility principle and most of our logic is in ou
 Our instructors Ix and Adam
 
 # Created By
-Andrew , Margarita, Arpita
+Andrew Mullan https://github.com/MullaN
+Arpita Dutta https://github.com/Arpita-22
+Margarita Morozova https://github.com/rita-morozova
+

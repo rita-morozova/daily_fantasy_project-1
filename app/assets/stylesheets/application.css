@@ -14,7 +14,7 @@
  *= require_self
  */
 
-
+ 
 
 ul.navigation {
     list-style-type: none;
@@ -25,10 +25,13 @@ ul.navigation {
 }
 
 
+
 ul.navigation > li {
     float: left;
     border-right: solid 1px white;
+    
 }
+
 
 ul.navigation > li a {
     display: block;
@@ -41,6 +44,7 @@ ul.navigation > li a {
 ul.navigation > li a:hover {
     background-color: rgb(70, 103, 78);
 }
+
 
 
 

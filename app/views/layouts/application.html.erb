@@ -16,20 +16,21 @@
     <li><a href="/users/users_contests">My Contests</a></li>
     <% if session[:user_id] && User.find(session[:user_id]).admin %>
       <li><a href="/contests/new">Create Contests</a></li>
-      <li><a href="/add_balance">Add Balance to User</a></li>
+      <li><a href="/add_balance">Add Balance</a></li>
     <% end %>
     <li><a href="/users">Users</a></li>
     <li><a href="/players">Players</a></li>
     <li><a href="/players/analytics">Analytics</a></li>
     
-    
+ 
     <% if session[:user_id] %>
-      <li stlye="float:right"><a href="/users/<%= session[:user_id] %>">My Profile</a></li>
-      <li stlye="float:right"><a href="/logout">Log Out</a></li>
+      <li style="float:right"><a href="/users/<%= session[:user_id] %>">My Profile</a></li>
+      <li style="float:right"><a href="/logout">Log Out</a></li>
     <% else %>
-      <li stlye="float:right"><a href="/login">Log-In</a></li>
-      <li stlye="float:right"><a href="/users/new">Sign-Up</a></li>
+      <li style="float:right"><a href="/login">Log In</a></li>
+      <li style="float:right"><a href="/users/new">Sign Up</a></li>
     <% end %>
+
     </ul> 
     <%= yield %>
   </body>
