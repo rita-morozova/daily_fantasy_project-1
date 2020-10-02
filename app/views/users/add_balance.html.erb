@@ -1,7 +1,11 @@
+<h1><%=image_tag('football-banner')%></h1>
 <h1>Add Balance to User</h1>
+<ul>
 <%= form_for :user, url: post_balance_path, method: :patch do |f| %>
-    <%= f.collection_select :user_id, User.all, :id, :username %>
-    <%= f.label :balance %>
-    <%= f.text_field :balance %>
-    <%= f.submit %>
+    <li>Choose User: 
+    <%= f.collection_select :user_id, User.all, :id, :username %></li>
+    <li><%= f.label :balance, style: "width:auto;float:none;" %>
+    <%= f.text_field :balance, style: "float:none;"%></li><br>
+    <%= f.submit "Add Balance" %>
 <% end %>
+</ul>
