@@ -1,13 +1,13 @@
-<h1><%=image_tag('football-banner')%></h1>
+<%=image_tag('football-banner')%>
 <div class="container">
-<h1><%="Contest: " + @contest.name %></h1><br>
-<h2><%="Budget $ " + @contest.budget.to_s %></h2><br>
-<h2><%="Prize $ " + @contest.prize.to_s %></h2><br>
-<%= link_to "Join Contest", new_team_path %>
+    <h1><%="Contest: " + @contest.name %></h1><br>
+    <h2><%="Budget $ " + @contest.budget.to_s %></h2><br>
+    <h2><%="Prize $ " + @contest.prize.to_s %></h2><br>
+    <%= link_to "Join Contest", new_team_path %>
 <br>
 <br>
-<ol>
 
+<ol>
     <% @contest.ranked_users.each do |user|%>
         <% if user.id == session[:user_id] %>
         <li><%= link_to user.username, team_path(user.teams.where(contest_id: @contest.id)[0].id)%><%=  " " + user.score_for_contest(@contest).to_s %></li><br>

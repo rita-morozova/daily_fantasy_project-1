@@ -16,7 +16,7 @@
 
 .container {
   width: 90%;
-  margin: 10px auto;
+  margin:  auto;
   padding: 10px;
   font-family: Oswald, Helvetica, Arial;
   color: #333332;
@@ -24,7 +24,7 @@
   font-size: 18px;
 }
 
- .container .list {
+ .container .list_index {
   width: 400px;
   height: 200px;
   top: 50%;
@@ -34,7 +34,7 @@
   margin-right: auto;
  }
 
- .container .list h1{
+ .container .list_index h1{
    text-align: center;
   
  }
@@ -48,11 +48,11 @@
   color: blue;
 }
 
-.list {
+.list_index {
   list-style: none;
 }
 
-.list li:before {
+.list_index li:before {
   content: "🏈";
   margin: 0 16px 0 0;
 }

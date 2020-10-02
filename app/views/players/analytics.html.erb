@@ -1,23 +1,23 @@
-<h1><%=image_tag('football-banner')%></h1>
+<%=image_tag('football-banner')%>
 <div class="container">
  <div class="row">
   <div class="column">
-<h3 style="color:#558637"> THE TOP-TEN MOST EXPENSIVE PLAYERS </h3><br>
-<p><ol><% Player.top_ten.each do |player| %>
+  <h3 style="color:#558637"> THE TOP-TEN MOST EXPENSIVE PLAYERS </h3><br>
+  <p><ol><% Player.top_ten.each do |player| %>
   <li><%= player %></li><br>
   <% end %></ol></p>
   </div>
 
   <div class="column">
   <h3 style="color:#558637">THE TOP TEN LEAST EXPENSIVE PLAYERS</h3><br>
-<p><ol><% Player.bottom_ten.each do |player| %>
+  <p><ol><% Player.bottom_ten.each do |player| %>
   <li><%= player %></li><br>
   <% end %></ol></p>
   </div>
 
   <div class="column">
   <h3 style="color:#558637">PLAYERS WITH THE HIGHEST SCORE </h3><br>
-<p><ol><% Player.highest_score.each do |player| %>
+  <p><ol><% Player.highest_score.each do |player| %>
   <li><%= player %></li><br>
   <% end %></ol></p>
   </div>

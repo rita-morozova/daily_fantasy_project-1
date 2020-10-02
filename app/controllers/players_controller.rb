@@ -14,6 +14,5 @@ class PlayersController < ApplicationController
     end
 
     def analytics 
-        # @players = Player.all
     end
 end

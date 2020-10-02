@@ -7,7 +7,6 @@ class ContestsController < ApplicationController
     end
 
     def show
-        
     end
 
     def new

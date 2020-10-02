@@ -1,9 +1,10 @@
 <%=image_tag('football-banner')%>
 <div class ="container">
+<ul>
 <% if @user.teams.any? %>
 <% @user.teams.each do |team| %>
-  <ul>
  <li> <%= link_to team.contest.name, contest_path(team.contest) %> <%= " - Score: " + @user.score_for_contest(team.contest).to_s %></li>
+ <br>
  <%end %>
  <% else %>
  <%= "You do not have any contests yet" %>

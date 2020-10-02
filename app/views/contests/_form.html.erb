@@ -1,23 +1,23 @@
 <%= form_for @contest do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name%><br>
-    <% if flash[:errors] && flash[:errors]["name"]%>
+        <% if flash[:errors] && flash[:errors]["name"]%>
         <p style="color:red; font-size: 14px; float:right">Contest Name Already Taken</p>
-    <% end %><br />
+        <% end %><br />
     <%= f.label :game_week %>
     <%= f.number_field :game_week %> <br>   
-    <% if flash[:errors] && flash[:errors]["game_week"]%>
+        <% if flash[:errors] && flash[:errors]["game_week"]%>
         <p style="color:red; font-size: 14px; float:right">Must be a valid week (1-17)</p>
-    <% end %><br />
+        <% end %><br />
     <%= f.label :budget %>
     <%= f.number_field :budget %><br>    
-    <% if flash[:errors] && flash[:errors]["budget"]%>
+        <% if flash[:errors] && flash[:errors]["budget"]%>
         <p style="color:red; font-size: 14px; float:right">Budget must be greater than $60,000</p>
-    <% end %><br />    
+        <% end %><br />    
     <%= f.label :prize %>
     <%= f.number_field :prize %><br>    
-    <% if flash[:errors] && flash[:errors]["prize"]%>
+        <% if flash[:errors] && flash[:errors]["prize"]%>
         <p style="color:red; font-size: 14px; float:right">Prize must be greater than $0.00</p>
-    <% end %><br />
+        <% end %><br />
     <%= f.submit %>
 <% end %>
