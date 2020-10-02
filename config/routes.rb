@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   get "/logout", to: "sessions#destroy"
   post "/logout", to: "sessions#destroy"
+  get "/add_balance", to: "users#add_balance"
+  patch "/post_balance", to: "users#post_balance", as: "post_balance"
   
  
 

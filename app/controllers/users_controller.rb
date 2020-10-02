@@ -38,6 +38,18 @@ class UsersController < ApplicationController
         end
     end
 
+    def add_balance
+        if !User.find(session[:user_id]).admin
+            redirect_to '/'
+        end
+    end
+
+    def post_balance
+        user = User.find(params[:user][:user_id])
+        user.update(balance: user.balance + params[:user][:balance].to_i)
+        redirect_to users_path
+    end
+
     def destroy
        @user.destroy
        redirect_to '/'

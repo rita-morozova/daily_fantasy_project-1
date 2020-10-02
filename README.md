@@ -33,15 +33,19 @@ Put require rails/all in config/application.rb .
 * Gnerate tables and controllers by
 `rails g resource modelname colname:datatype` 
 
-* Create associations in the modelname.rb and then run `rails db:migrate` and `rails db:seed`.
+* Create associations in the modelname.rb and then run `rails db:migrate` and after creating seeds in seeds.rb file run          `rails db:seed`.
 
 * Our database is setup.
+
+* to test out associations run `rails c` and test out the associations.
 
 ## Validations:
 
 * Create validations inside the model.rb file.
 
 ## Running the application:
+
+* We are using Behavior Driven Development.
 
 * To run our application type `rails s` and then type `localhost:3000` in the browser.
 
