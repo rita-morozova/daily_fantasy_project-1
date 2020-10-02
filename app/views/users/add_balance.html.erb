@@ -1,11 +1,14 @@
 <h1><%=image_tag('football-banner')%></h1>
+<div class="container">
 <h1>Add Balance to User</h1>
+<br>
 <ul>
 <%= form_for :user, url: post_balance_path, method: :patch do |f| %>
-    <li>Choose User: 
-    <%= f.collection_select :user_id, User.all, :id, :username %></li>
-    <li><%= f.label :balance, style: "width:auto;float:none;" %>
+    <li style="list-style: none;">Choose User: 
+    <%= f.collection_select :user_id, User.all, :id, :username %></li><br>
+    <li style="list-style: none;"><%= f.label :balance, style: "width:auto;float:none;" %>
     <%= f.text_field :balance, style: "float:none;"%></li><br>
     <%= f.submit "Add Balance" %>
 <% end %>
 </ul>
+</div>

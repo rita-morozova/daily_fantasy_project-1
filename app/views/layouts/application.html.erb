@@ -24,11 +24,11 @@
     
  
     <% if session[:user_id] %>
-      <li style="float:right"><a href="/users/<%= session[:user_id] %>">My Profile</a></li>
       <li style="float:right"><a href="/logout">Log Out</a></li>
+      <li style="float:right"><a href="/users/<%= session[:user_id] %>">My Profile</a></li>
     <% else %>
-      <li style="float:right"><a href="/login">Log In</a></li>
       <li style="float:right"><a href="/users/new">Sign Up</a></li>
+      <li style="float:right"><a href="/login">Log In</a></li>
     <% end %>
 
     </ul> 
