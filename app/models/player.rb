@@ -51,22 +51,22 @@ class Player < ApplicationRecord
     # end
 
     def self.top_five_players_qb
-        top_qb = Player.all.where(position: "QB").sort_by{|player| player.salary_modifier}.reverse[0..5]
+        top_qb = Player.all.where(position: "QB").sort_by{|player| player.salary_modifier}.reverse[0..4]
         top_qb.map {|player| player.name}#+ " $ " + ((player.salary_modifier * 10000).round(0)).to_s(:delimited)}
     end
 
     def self.top_five_players_rb
-        top_rb = Player.all.where(position: "RB").sort_by{|player| player.salary_modifier}.reverse[0..5]
+        top_rb = Player.all.where(position: "RB").sort_by{|player| player.salary_modifier}.reverse[0..4]
         top_rb.map {|player| player.name }#+ " $ " + ((player.salary_modifier * 10000).round(0)).to_s(:delimited)}
     end
 
     def self.top_five_players_wr
-        top_wr = Player.all.where(position: "WR").sort_by{|player| player.salary_modifier}.reverse[0..5]
+        top_wr = Player.all.where(position: "WR").sort_by{|player| player.salary_modifier}.reverse[0..4]
         top_wr.map {|player| player.name} #+ " $ " + ((player.salary_modifier * 10000).round(0)).to_s(:delimited)}
     end
 
     def self.top_five_players_te
-        top_te = Player.all.where(position: "TE").sort_by{|player| player.salary_modifier}.reverse[0..5]
+        top_te = Player.all.where(position: "TE").sort_by{|player| player.salary_modifier}.reverse[0..4]
         top_te.map {|player| player.name} #+ " $ " + ((player.salary_modifier * 10000).round(0)).to_s(:delimited)}
     end
 
