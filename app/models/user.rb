@@ -6,8 +6,8 @@ class User < ApplicationRecord
     has_secure_password
 
     def overall_position
-        #add functionality later
-        1
+        users_by_balance = User.all.sort_by {|user| user.balance}.reverse
+        users_by_balance.find_index {|user| user.id == self.id } + 1
     end
 
     def score_for_contest(contest)
