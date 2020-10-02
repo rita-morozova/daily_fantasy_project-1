@@ -14,11 +14,14 @@
     <% end %>
     <%= f.label :password %>
     <%= f.password_field :password %><br>
-    <%= f.label :password_confirmation %>
+    <%= f.label :confirm_password %>
     <%= f.password_field :password_confirmation %>
+    <br>
+    <br>
     <% if flash[:errors] && flash[:errors]["password_confirmation"]%>
     <p style="color:red; font-size: 14px; float:right">Passwords do no not match</p>
         <% end %>
-    <%= f.submit %>
+        <br/>
+    <%= f.submit%>
 <% end %>
 </div>
