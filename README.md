@@ -37,11 +37,15 @@ Put require rails/all in config/application.rb .
 
 * Our database is setup.
 
+* to test out associations run `rails c` and test out the associations.
+
 ## Validations:
 
 * Create validations inside the model.rb file.
 
 ## Running the application:
+
+* We are using Behavior Driven Development.
 
 * To run our application type `rails s` and then type `localhost:3000` in the browser.
 
