@@ -26,7 +26,8 @@ class Player < ApplicationRecord
     end
 
     def self.bottom_ten 
-        bottom = Player.all.sort_by {|player| player.salary_modifier}[0..9]
+        bottom = Player.all.select {|player| player.salary_modifier > 0.0 }
+        bottom = bottom.sort_by {|player| player.salary_modifier}[0..9]
         bottom.map {|player| player.name + " $ " + ((player.salary_modifier * 10000).round(0)).to_s(:delimited)}
     end
 
