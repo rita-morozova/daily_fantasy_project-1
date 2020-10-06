@@ -12,9 +12,9 @@ Welcome to the Flatiron Fantasy Football game! Here you can create a profile and
 
 ## System Dependencies
 
- *`gem'bcrypt'`
- *`gem 'fantasy_football_nerd'`( API data) 
- *`gem'csv'`(CSV data) 
+ * gem'bcrypt'
+ * gem 'fantasy_football_nerd'( API data) 
+ * gem'csv'(CSV data) 
 
 ## Setup:
 * Fork and clone the repository
