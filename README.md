@@ -30,21 +30,6 @@ Welcome to the Flatiron Fantasy Football game! Here you can create a profile and
 * The seed file will update with scores for players for Week 1-3. If at a future date you would like to add scores for newer weeks, download the new week's csv from https://www.fantasypros.com/nfl/reports/leaders/ and save it in the storage folder as "points_week_#weeknumber.csv" then run Contest.new_scores_for_week(#weeknumber) in rails c to update the database.
 
 
-## Creating Database:
-
-* Gnerate tables and controllers by
-`rails g resource modelname colname:datatype` 
-
-* Create associations in the modelname.rb and then run `rails db:migrate` and after creating seeds in seeds.rb file run `rails db:seed`.
-
-* Our database is setup.
-
-* To test out associations run `rails c` and test out the associations.
-
-## Validations:
-
-* Create validations inside the model.rb file.
-
 ## Running the application:
 
 * We are using Behavior Driven Development.
