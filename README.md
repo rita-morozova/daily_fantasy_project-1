@@ -40,9 +40,7 @@ Welcome to the Flatiron Fantasy Football game! Here you can create a profile and
 
 * If you get error running the application try clearing out the login session from the cookie editor.
 
-
-Our model follows single responsibility principle and most of our logic is in our models
-
+[Video Demo](https://youtu.be/13AqTKEOzFk)
 
 
 # Created By
