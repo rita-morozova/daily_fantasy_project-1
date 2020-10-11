@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-FFNerd.api_key = "InsertAPIKeyHere"
+FFNerd.api_key = "ea3znt7a5evy"
 players = FFNerd.players
 teams = FFNerd.teams
 players.select! {|player| player.active == "1" }
@@ -22,6 +22,6 @@ completed_game_weeks = 3
     end
 end
 Player.update_salary_modifiers
-admin = User.create(username: "admin", password_digest: "admin", balance: 0, email: "admin@admin.com", admin: true )
+
 
  
